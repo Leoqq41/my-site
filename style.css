@@ -1,4 +1,4 @@
-/* 鍏ㄥ眬鏍峰紡 */
+/* 全局样式 */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body {
     padding: 0 20px;
 }
 
-/* 瀵艰埅鏍?*/
+/* 导航栏 */
 .navbar {
     position: fixed;
     top: 0;
@@ -94,7 +94,7 @@ body {
     width: 100%;
 }
 
-/* 鑻遍泟鍖哄煙 */
+/* 英雄区域 */
 .hero {
     height: 100vh;
     display: flex;
@@ -130,7 +130,7 @@ body {
     color: var(--light-text);
 }
 
-/* 鎸夐挳鏍峰紡 */
+/* 按钮样式 */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -170,7 +170,7 @@ body {
     box-shadow: 0 6px 16px rgba(139, 69, 19, 0.3);
 }
 
-/* 閫氱敤閮ㄥ垎鏍峰紡 */
+/* 通用部分样式 */
 section {
     padding: 100px 0;
     position: relative;
@@ -197,7 +197,7 @@ section {
     background-color: var(--primary-color);
 }
 
-/* 鍏充簬鎴?*/
+/* 关于我 */
 .about {
     background-color: white;
 }
@@ -279,7 +279,7 @@ section {
     z-index: 1;
 }
 
-/* 鎶€鑳?*/
+/* 技能 */
 .skills {
     background-color: var(--light-bg);
 }
@@ -332,7 +332,7 @@ section {
     line-height: 1.6;
 }
 
-/* 椤圭洰 */
+/* 项目 */
 .projects {
     background-color: white;
 }
@@ -379,7 +379,7 @@ section {
     line-height: 1.6;
 }
 
-/* 鑱旂郴 */
+/* 联系 */
 .contact {
     background-color: var(--light-bg);
 }
@@ -449,7 +449,7 @@ section {
     resize: none;
 }
 
-/* 椤佃剼 */
+/* 页脚 */
 .footer {
     background-color: var(--primary-color);
     color: white;
@@ -489,7 +489,7 @@ section {
     transform: translateY(-3px);
 }
 
-/* 鍝嶅簲寮忚璁?*/
+/* 响应式设计 */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
