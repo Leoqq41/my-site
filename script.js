@@ -1,0 +1,125 @@
+// 骞虫粦婊氬姩
+function smoothScroll() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+// 瀵艰埅鏍忔粴鍔ㄦ晥鏋?
+function navbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+}
+
+// 鍏冪礌杩涘叆瑙嗗彛鍔ㄧ敾
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.skill-card, .project-card, .contact-item, .about-content');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    elements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
+    });
+}
+
+// 琛ㄥ崟楠岃瘉
+function formValidation() {
+    const form = document.querySelector('form');
+    const inputs = document.querySelectorAll('.form-input, .form-textarea');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            if (input.value.trim() === '') {
+                input.style.borderColor = '#ff0000';
+                isValid = false;
+            } else {
+                input.style.borderColor = 'var(--border-color)';
+            }
+        });
+        
+        if (isValid) {
+            alert('鐣欒█鍙戦€佹垚鍔燂紒');
+            form.reset();
+        } else {
+            alert('璇峰～鍐欐墍鏈夊繀濉瓧娈碉紒');
+        }
+    });
+}
+
+// 鎶€鑳藉崱鐗囨偓鍋滄晥鏋?
+function skillCardHover() {
+    const skillCards = document.querySelectorAll('.skill-card');
+    
+    skillCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// 椤圭洰鍗＄墖鎮仠鏁堟灉
+function projectCardHover() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// 鍒濆鍖栨墍鏈夊姛鑳?
+function init() {
+    smoothScroll();
+    navbarScroll();
+    animateOnScroll();
+    formValidation();
+    skillCardHover();
+    projectCardHover();
+}
+
+// 椤甸潰鍔犺浇瀹屾垚鍚庡垵濮嬪寲
+window.addEventListener('DOMContentLoaded', init);
