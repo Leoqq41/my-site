@@ -1,4 +1,4 @@
-// 骞虫粦婊氬姩
+// 平滑滚动
 function smoothScroll() {
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -16,7 +16,7 @@ function smoothScroll() {
     });
 }
 
-// 瀵艰埅鏍忔粴鍔ㄦ晥鏋?
+// 导航栏滚动效果
 function navbarScroll() {
     const navbar = document.querySelector('.navbar');
     
@@ -31,7 +31,7 @@ function navbarScroll() {
     });
 }
 
-// 鍏冪礌杩涘叆瑙嗗彛鍔ㄧ敾
+// 元素进入视口动画
 function animateOnScroll() {
     const elements = document.querySelectorAll('.skill-card, .project-card, .contact-item, .about-content');
     
@@ -54,7 +54,7 @@ function animateOnScroll() {
     });
 }
 
-// 琛ㄥ崟楠岃瘉
+// 表单验证
 function formValidation() {
     const form = document.querySelector('form');
     const inputs = document.querySelectorAll('.form-input, .form-textarea');
@@ -73,15 +73,15 @@ function formValidation() {
         });
         
         if (isValid) {
-            alert('鐣欒█鍙戦€佹垚鍔燂紒');
+            alert('留言发送成功！');
             form.reset();
         } else {
-            alert('璇峰～鍐欐墍鏈夊繀濉瓧娈碉紒');
+            alert('请填写所有必填字段！');
         }
     });
 }
 
-// 鎶€鑳藉崱鐗囨偓鍋滄晥鏋?
+// 技能卡片悬停效果
 function skillCardHover() {
     const skillCards = document.querySelectorAll('.skill-card');
     
@@ -96,7 +96,7 @@ function skillCardHover() {
     });
 }
 
-// 椤圭洰鍗＄墖鎮仠鏁堟灉
+// 项目卡片悬停效果
 function projectCardHover() {
     const projectCards = document.querySelectorAll('.project-card');
     
@@ -111,7 +111,7 @@ function projectCardHover() {
     });
 }
 
-// 鍒濆鍖栨墍鏈夊姛鑳?
+// 初始化所有功能
 function init() {
     smoothScroll();
     navbarScroll();
@@ -121,5 +121,5 @@ function init() {
     projectCardHover();
 }
 
-// 椤甸潰鍔犺浇瀹屾垚鍚庡垵濮嬪寲
+// 页面加载完成后初始化
 window.addEventListener('DOMContentLoaded', init);
