@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #ff6600;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 10px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 30px;
+            object-fit: cover;
+        }
+        .profile-info {
+            flex: 1;
+        }
+        .profile-info h3 {
+            color: #ff6600;
+            margin-top: 0;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #ff6600;
+        }
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline-item {
+            padding: 20px 0;
+            position: relative;
+            padding-left: 40px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 25px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff6600;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 35px;
+            width: 2px;
+            height: calc(100% - 10px);
+            background-color: #ddd;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: #ff6600;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>关于我</h1>
+        <p>了解更多关于我的信息</p>
+    </header>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="python-course.html">Python课程</a>
+        <a href="about.html">关于我</a>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <div class="profile">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20developer%20portrait%20headshot&image_size=square" alt="个人头像" class="profile-img">
+                <div class="profile-info">
+                    <h3>开发者</h3>
+                    <p>我是一名热爱编程的开发者，专注于Python和Web开发。我喜欢分享知识，帮助他人学习编程。</p>
+                    <p>我拥有多年的编程经验，擅长Python、JavaScript等语言，以及各种Web开发框架。</p>
+                    <div class="social-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>教育背景</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2020-2024</div>
+                    <div class="timeline-title">计算机科学与技术</div>
+                    <div class="timeline-content">本科，某大学</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024-2026</div>
+                    <div class="timeline-title">软件工程</div>
+                    <div class="timeline-content">硕士，某大学</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>工作经历</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024-至今</div>
+                    <div class="timeline-title">全栈开发工程师</div>
+                    <div class="timeline-content">某科技公司</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023-2024</div>
+                    <div class="timeline-title">Python开发实习生</div>
+                    <div class="timeline-content">某互联网公司</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>技能与专长</h2>
+            <ul>
+                <li><strong>编程语言：</strong>Python, JavaScript, HTML, CSS</li>
+                <li><strong>框架：</strong>Django, Flask, React, Vue</li>
+                <li><strong>数据库：</strong>MySQL, PostgreSQL, MongoDB</li>
+                <li><strong>工具：</strong>Git, Docker, AWS</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>联系方式</h2>
+            <p>如果您有任何问题或合作意向，欢迎通过以下方式联系我：</p>
+            <ul>
+                <li>邮箱：example@example.com</li>
+                <li>电话：123-4567-8910</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 关于我</p>
+    </footer>
+</body>
+</html>

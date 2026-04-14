@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python课程学习</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #ff6600;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 10px;
+        }
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: transform 0.3s;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .course-card h3 {
+            color: #ff6600;
+            margin-top: 0;
+        }
+        .course-card .level {
+            display: inline-block;
+            padding: 3px 10px;
+            background-color: #ff6600;
+            color: white;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        .course-card .duration {
+            color: #666;
+            font-size: 14px;
+        }
+        .course-content {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        .course-content ul {
+            padding-left: 20px;
+        }
+        .course-content li {
+            margin: 5px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e55a00;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python课程学习</h1>
+        <p>从零开始学习Python编程</p>
+    </header>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="python-course.html">Python课程</a>
+        <a href="about.html">关于我</a>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <h2>课程介绍</h2>
+            <p>本课程系列涵盖Python编程的各个方面，从基础到高级，适合不同水平的学习者。</p>
+        </div>
+        <div class="section">
+            <h2>课程列表</h2>
+            
+            <div class="course-card">
+                <h3>Python基础入门</h3>
+                <span class="level">初级</span>
+                <span class="duration">10小时</span>
+                <div class="course-content">
+                    <p>本课程将带你入门Python编程，包括：</p>
+                    <ul>
+                        <li>Python安装与环境配置</li>
+                        <li>基本数据类型（字符串、数字、列表、字典等）</li>
+                        <li>控制流（条件语句、循环）</li>
+                        <li>函数定义与调用</li>
+                        <li>文件操作</li>
+                    </ul>
+                    <a href="#" class="btn">开始学习</a>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <h3>Python进阶编程</h3>
+                <span class="level">中级</span>
+                <span class="duration">15小时</span>
+                <div class="course-content">
+                    <p>本课程将带你深入学习Python的高级特性：</p>
+                    <ul>
+                        <li>面向对象编程</li>
+                        <li>异常处理</li>
+                        <li>模块与包</li>
+                        <li>装饰器与生成器</li>
+                        <li>上下文管理器</li>
+                    </ul>
+                    <a href="#" class="btn">开始学习</a>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <h3>Python Web开发</h3>
+                <span class="level">高级</span>
+                <span class="duration">20小时</span>
+                <div class="course-content">
+                    <p>本课程将教你使用Python进行Web开发：</p>
+                    <ul>
+                        <li>Flask框架入门</li>
+                        <li>Django框架入门</li>
+                        <li>数据库操作</li>
+                        <li>API开发</li>
+                        <li>部署与上线</li>
+                    </ul>
+                    <a href="#" class="btn">开始学习</a>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <h3>Python数据分析</h3>
+                <span class="level">高级</span>
+                <span class="duration">18小时</span>
+                <div class="course-content">
+                    <p>本课程将教你使用Python进行数据分析：</p>
+                    <ul>
+                        <li>Numpy库</li>
+                        <li>Pandas库</li>
+                        <li>Matplotlib可视化</li>
+                        <li>数据分析实战</li>
+                        <li>机器学习基础</li>
+                    </ul>
+                    <a href="#" class="btn">开始学习</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>学习资源</h2>
+            <p>除了课程内容，我们还提供以下学习资源：</p>
+            <ul>
+                <li>练习代码</li>
+                <li>项目实战</li>
+                <li>常见问题解答</li>
+                <li>社区讨论</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Python课程学习</p>
+    </footer>
+</body>
+</html>
