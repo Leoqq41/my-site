@@ -412,6 +412,22 @@ main {
     background-color: #45a049;
 }
 
+.reset-button {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.reset-button:hover {
+    background-color: #F57C00;
+}
+
 .collapse-button {
     background: none;
     border: none;
@@ -426,7 +442,7 @@ main {
     color: white;
 }
 
-.code-block pre {
+.code-editor {
     background-color: #2d2d2d;
     color: #f8f8f2;
     margin: 0;
@@ -437,11 +453,21 @@ main {
     overflow-x: auto;
     transition: max-height 0.3s ease;
     max-height: 500px;
+    min-height: 100px;
+    width: 100%;
+    border: none;
+    resize: vertical;
 }
 
-.code-block pre.collapsed {
+.code-editor:focus {
+    outline: none;
+    border: 1px solid #4CAF50;
+}
+
+.code-editor.collapsed {
     max-height: 50px;
     overflow: hidden;
+    min-height: 50px;
 }
 
 .code-output {

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 为所有代码块添加运行功能
     const codeBlocks = document.querySelectorAll('.code-block');
     codeBlocks.forEach((block, index) => {
-        const code = block.querySelector('code').textContent;
+        const originalCode = block.querySelector('code').textContent;
         const codeContainer = document.createElement('div');
         codeContainer.className = 'code-container';
         
@@ -45,13 +45,25 @@ document.addEventListener('DOMContentLoaded', function() {
         runButton.className = 'run-button';
         runButton.textContent = '运行代码';
         
+        // 重置按钮
+        const resetButton = document.createElement('button');
+        resetButton.className = 'reset-button';
+        resetButton.textContent = '重置';
+        
         // 折叠按钮
         const collapseButton = document.createElement('button');
         collapseButton.className = 'collapse-button';
         collapseButton.textContent = '▼';
         
         controlBar.appendChild(runButton);
+        controlBar.appendChild(resetButton);
         controlBar.appendChild(collapseButton);
+        
+        // 创建可编辑的代码区域
+        const codeEditor = document.createElement('textarea');
+        codeEditor.className = 'code-editor';
+        codeEditor.value = originalCode;
+        codeEditor.spellcheck = false;
         
         // 输出区域
         const outputArea = document.createElement('div');
@@ -61,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 重新组织代码块
         const preElement = block.querySelector('pre');
         codeContainer.appendChild(controlBar);
-        codeContainer.appendChild(preElement);
+        codeContainer.appendChild(codeEditor);
         codeContainer.appendChild(outputArea);
         
         block.innerHTML = '';
@@ -70,14 +82,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // 运行按钮点击事件
         runButton.addEventListener('click', async () => {
             outputArea.textContent = '';
-            await runPythonCode(code, outputArea);
+            await runPythonCode(codeEditor.value, outputArea);
+        });
+        
+        // 重置按钮点击事件
+        resetButton.addEventListener('click', () => {
+            codeEditor.value = originalCode;
+            outputArea.textContent = '';
         });
         
         // 折叠按钮点击事件
         collapseButton.addEventListener('click', () => {
-            preElement.classList.toggle('collapsed');
+            codeEditor.classList.toggle('collapsed');
             outputArea.classList.toggle('collapsed');
-            collapseButton.textContent = preElement.classList.contains('collapsed') ? '▶' : '▼';
+            collapseButton.textContent = codeEditor.classList.contains('collapsed') ? '▶' : '▼';
         });
     });
 });
